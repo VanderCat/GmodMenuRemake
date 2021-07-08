@@ -1,24 +1,30 @@
-# gmodmainmenuremake
+# Garry's Menu Remake
+This project aims to rewrite all Garry's Mod Menu to modern framework (Vue.js v2).
 
-## Project setup
-```
-npm install
-```
+This mod is an early stage of developement, not so much implemented yet.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+What's impemented:
+- Main Menu
+- Running lua from html
+- News are pulled from game
 
-### Compiles and minifies for production
+## Installation
+To install this menu we need to build it or download from Releases (if they exist)
+
+Move contents of built menu to `%SteamLibrary%/GarrysMod/garrysmod/html/`. **(!!DONT FORGET TO BACKUP IT!!)**
+After this you need to rename (in `lua/menu/mainmenu.lua`) `self.HTML:OpenURL( "asset://garrysmod/html/menu.html" )` to `self.HTML:OpenURL( "asset://garrysmod/html/index.html")` or  `%SteamLibrary%/GarrysMod/garrysmod/html/index.html` to `main.html`
+
+For some reason after building some files are not relative so we need to fix it:
+find all src or link and add a dot (e.g `src="/js/chunk.js"` => `src="./js/chunk.js"`)
+
+## Building
+First we need to install dependencies:
+```
+mpm install
+```
+And then
+
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+The built menu will be in `.\dist` folder
