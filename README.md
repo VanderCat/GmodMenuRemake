@@ -7,6 +7,7 @@ What's impemented:
 - Main Menu
 - Running lua from html
 - News are pulled from game
+- Opening problem helper
 
 You can check the look of menu [**here**](https://vandercat.github.io/GmodMenuRemake/)
 

@@ -9,7 +9,7 @@
           <v-icon>mdi-arrow-left</v-icon>
         </v-btn>
         <v-spacer></v-spacer>
-        <v-btn icon>
+        <v-btn icon @click="runProblems">
           <v-icon>mdi-alert</v-icon>
         </v-btn>
         <v-btn icon>
@@ -60,6 +60,11 @@ export default {
     }),
     components: {
       'Gamemode': gamemode
+    },
+    methods: {
+      runProblems() {
+        window.lua.run('OpenProblemsPanel()')
+      }
     },
     created() {
       this.$store.commit("UpdateEngine")
