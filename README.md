@@ -8,8 +8,9 @@ What's impemented:
 - Running lua from html
 - News are pulled from game
 - Opening problem helper
+- Gamemode switching and pulling the list from game itslef
 
-You can check the look of menu [**here**](https://vandercat.github.io/GmodMenuRemake/)
+You can check the look of menu [**here**](https://vandercat.github.io/GmodMenuRemake/) (may be outdated a bit)
 
 ## Installation
 To install this menu we need to build it or download from Releases (if they exist)

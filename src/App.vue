@@ -18,7 +18,7 @@
         <v-btn icon>
           <v-icon>mdi-translate</v-icon>
         </v-btn>
-        <Gamemode :gamemodes="gamemodes" :selectedItem="2"/>
+        <Gamemode :gamemodes="$store.state.gamemodes.list" :selectedItem="$store.state.gamemodes.selected"/> <!-- IDK why i passing it by properties but whatever -->
       </v-toolbar>
     </v-footer>
   </v-app>
@@ -32,32 +32,7 @@ export default {
   name: 'App',
 
   data: () => ({
-    gamemodes: {
-           "1": {
-              "menusystem": false, 
-              "maps": "", 
-              "name": "base", 
-              "title": "Base" 
-              }, 
-            "2": { 
-              "menusystem": true, 
-              "maps": "", 
-              "name": "fretta", 
-              "title": "Fretta Gamemode Base" 
-              }, 
-            "3": { 
-              "menusystem": true, 
-              "maps": "^gm_|^gmod_", 
-              "name": "sandbox", 
-              "title": "Sandbox"
-              },
-            "4": { 
-              "menusystem": true, 
-              "maps": "^ttt_", 
-              "name": "terrortown", 
-              "title": "Trouble In Terrorist Town"
-              }}
-    }),
+  }),
     components: {
       'Gamemode': gamemode
     },
@@ -69,7 +44,8 @@ export default {
     created() {
       this.$store.commit("UpdateEngine")
       if (this.$store.state.IN_ENGINE) {
-        console.log("RUNLUA:LoadNewsList()")
+        $(document.body).css("background", "none")
+        window.lua.run("LoadNewsList()")
       }
     }
   };

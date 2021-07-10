@@ -4,8 +4,9 @@ import router from './router'
 import vuetify from './plugins/vuetify'
 import store from './store'
 var utils = require('./js/utils.js')
-window.UpdateNewsList=utils.UpdateNewsList;
-window.lua=utils.lua;
+for (var id in utils) {
+  window[id]=utils[id]
+}
 Vue.config.productionTip = false
 
 window.Vue = new Vue({

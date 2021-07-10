@@ -6,8 +6,7 @@
           <v-list-item-title class="text-h6">
             Garry's Mod
           </v-list-item-title>
-          <v-list-item-subtitle>
-            Materialized
+          <v-list-item-subtitle v-text="$store.state.gamemodes.list[$store.state.gamemodes.selectedId].title">
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>

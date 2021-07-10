@@ -34,16 +34,57 @@ export default new Vuex.Store({
         Url: 'https://google.com/?q=3', 
         Date: Date.now() - 604800000 + 10000 
       },
-    ]
+    ],
+    gamemodes: {
+      list: {
+        "1": {
+          "menusystem": false, 
+          "maps": "", 
+          "name": "base", 
+          "title": "Base" 
+          }, 
+        "2": { 
+          "menusystem": true, 
+          "maps": "", 
+          "name": "fretta", 
+          "title": "Fretta Gamemode Base" 
+          }, 
+        "3": { 
+          "menusystem": true, 
+          "maps": "^gm_|^gmod_", 
+          "name": "sandbox", 
+          "title": "Sandbox"
+          },
+        "4": { 
+          "menusystem": true, 
+          "maps": "^ttt_", 
+          "name": "terrortown", 
+          "title": "Trouble In Terrorist Town"
+          }
+        },
+      selected: "sandbox",
+      selectedId: "3"
+      },
   },
   mutations: {
     UpdateNews( state, news )
     {
-      state.news = news
+      Vue.set(state, "news", news) // Reactivity
     },
     UpdateEngine(state)
     {
       state.IN_ENGINE = navigator.userAgent.indexOf( "Valve Source Client" ) != -1;
+    },
+    UpdateGamemodes( state, gms )
+    {
+      Vue.set(state.gamemodes, "list", gms) // Reactivity
+    },
+    UpdateSelectedGamemode( state, gm )
+    {
+      Vue.set(state.gamemodes, "selected", gm) // Reactivity
+      for (var id in state.gamemodes.list) {
+        if (state.gamemodes.list[id].name == gm) Vue.set(state.gamemodes, "selectedId", id);
+      }
     }
   },
   actions: {

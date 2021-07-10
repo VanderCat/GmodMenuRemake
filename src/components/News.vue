@@ -26,8 +26,10 @@ export default {
     position:absolute; 
     z-index: 1; 
     width: 100%; 
-    color: white !important; 
+    color: white !important;
+    text-shadow: 1px 1px 2px black;
     background: rgba(0,0,0,0.3) !important; 
     text-align:right;
+    padding: 8px;
   }
 </style>
