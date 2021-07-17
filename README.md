@@ -9,6 +9,8 @@ What's impemented:
 - News are pulled from game
 - Opening problem helper
 - Gamemode switching and pulling the list from game itslef
+- Starting a game
+- Selecting a map with additions customization after build (e.g. You can tweak some settings). **Look [Here](https://github.com/VanderCat/GmodMenuRemake/tree/main/public/mapimglist/README.md)** 
 
 You can check the look of menu [**here**](https://vandercat.github.io/GmodMenuRemake/) (may be outdated a bit)
 

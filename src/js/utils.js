@@ -9,8 +9,25 @@ module.exports = {
     {
         window.Vue.$store.commit("UpdateSelectedGamemode", gamemode)
     },
+    UpdateServerSettings(settings)
+    {
+        settings.maxplayers = Number(settings.maxplayers)
+        settings.sv_lan = Number( settings.sv_lan ) == 1;
+        settings.p2p_enabled = Number(settings.p2p_enabled) == 1
+        settings.p2p_frendsonly = Number(settings.p2p_frendsonly) == 1
+        if (settings.settings)
+            for (let id in settings.settings )
+                if ( settings.settings[id].type == "CheckBox" )
+                    settings.settings[id].Value = settings.settings[id].Value == "1"
+        window.Vue.$store.commit("UpdateServerSettings", settings)
+    },
+    UpdateMaps(maps)
+    {
+        window.Vue.$store.commit("UpdateMaps", maps)
+    },
     lua: {
         run(command) {
+            console.debug("DEBUG:"+command)
             console.log("RUNLUA:"+command)
         },
         runUICommand(command) {
@@ -20,10 +37,10 @@ module.exports = {
             this.run("surface.PlaySound(\""+soundName+"\")")
         },
         runHook(hook) {
-            this.run("hook.Run("+hook+")")
+            this.run("hook.Run(\""+hook+"\")")
         },
         runConsoleCommand(command,arg) {
-            this.run("RunConsoleCommand(\""+command+((typeof arg === "undefined" || arg === null)? "" : "\", \""+arg+"\"")+")")
+            this.run("RunConsoleCommand(\""+command+((typeof arg === "undefined" || arg === null)? "" : "\", \""+arg)+"\")")
         },
     }
   }

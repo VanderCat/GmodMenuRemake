@@ -1,0 +1,77 @@
+{
+    "gm_construct": {
+        "bgimg":"https://vignette.wikia.nocookie.net/garrys-modseries/images/8/87/2015-05-18_00001.jpg/revision/latest?cb=20150518074849&path-prefix=ru"
+    },
+    "gm_flatgrass": {
+        "bgimg":"https://vignette.wikia.nocookie.net/gmod/images/0/04/Flatgrass01.jpg/revision/latest?cb=20200519145031"
+    },
+    "ctf_turbine": {
+        "bgimg":"https://teamwork.tf/images/map_context/ctf_turbine/spectator_1.jpg"
+    },
+    "ctf_2fort": {
+        "bgimg":"https://teamwork.tf/images/map_context/ctf_2fort/spectator_0.jpg"
+    },
+    "cp_dustbowl": {
+        "bgimg":"https://teamwork.tf/images/map_context/cp_dustbowl/spectator_0.jpg"
+    },
+    "plr_hightower": {
+        "bgimg":"https://teamwork.tf/images/map_context/plr_hightower/spectator_1.jpg"
+    },
+    "pl_upward": {
+        "bgimg":"https://teamwork.tf/images/map_context/pl_upward/spectator_4.jpg"
+    },
+    "pl_badwater": {
+        "bgimg":"https://teamwork.tf/images/map_context/pl_badwater/spectator_0.jpg"
+    },
+    "pl_frontier_final": {
+        "bgimg":"https://teamwork.tf/images/map_context/pl_frontier/spectator_3.jpg"
+    },
+    "koth_harvest_final": {
+        "bgimg":"https://teamwork.tf/images/map_context/koth_harvest/spectator_0.jpg"
+    },
+    "koth_harvest": {
+        "bgimg":"https://teamwork.tf/images/map_context/koth_harvest/spectator_0.jpg"
+    },
+    "pl_goldrush_final": {
+        "bgimg":"https://teamwork.tf/images/map_context/pl_goldrush/spectator_1.jpg"
+    },
+    "pl_goldrush": {
+        "bgimg":"https://teamwork.tf/images/map_context/pl_goldrush/spectator_1.jpg"
+    },
+    "mvm_ghost_town": {
+        "bgimg":"https://teamwork.tf/images/map_context/mvm_ghost_town/spectator_0.jpg"
+    },
+    "pl_swiftwater_final1": {
+        "bgimg":"https://teamwork.tf/images/map_context/pl_swiftwater/spectator_0.jpg"
+    },
+    "pl_swiftwater": {
+        "bgimg":"https://teamwork.tf/images/map_context/pl_swiftwater/spectator_0.jpg"
+    },
+    "pl_barnblitz": {
+        "bgimg":"https://teamwork.tf/images/map_context/pl_barnblitz/spectator_1.jpg"
+    },
+    "pl_borneo": {
+        "bgimg":"https://teamwork.tf/images/map_context/pl_borneo/spectator_0.jpg"
+    },
+    "pl_thundermountain": {
+        "bgimg":"https://teamwork.tf/images/map_context/pl_thundermountain/spectator_7.jpg"
+    },
+    "cp_degrootkeep": {
+        "bgimg":"https://teamwork.tf/images/map_context/cp_degrootkeep/spectator_0.jpg"
+    },
+    "ctf_doublecross": {
+        "bgimg":"https://teamwork.tf/images/map_context/ctf_doublecross/spectator_1.jpg"
+    },
+    "mvm_coaltown": {
+        "bgimg":"https://teamwork.tf/images/map_context/mvm_coaltown/spectator_0.jpg"
+    },
+    "koth_suijin": {
+        "bgimg":"https://teamwork.tf/images/map_context/koth_suijin/spectator_1.jpg"
+    },
+    "cp_process_final": {
+        "bgimg":"https://teamwork.tf/images/map_context/cp_process/spectator_0.jpg"
+    },
+    "cp_process": {
+        "bgimg":"https://teamwork.tf/images/map_context/cp_process/spectator_0.jpg"
+    }
+}

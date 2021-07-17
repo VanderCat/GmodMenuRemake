@@ -1,5 +1,5 @@
 <template>
-  <v-app class="app">
+  <v-app class="app" id="mainMenu">
     <v-navigation-drawer app permanent>
         <v-list-item>
         <v-list-item-content>
@@ -11,8 +11,7 @@
         </v-list-item-content>
       </v-list-item>
       <v-divider></v-divider>
-      <v-list dense v-for="(groups, i) in entries" :key="i">
-        <v-list-item-group>
+      <v-list dense v-for="(groups, i) in entries" :key="i" nav>
           <v-list-item v-for="(entry, i) in groups" :key="i" @click="entry.action">
             <v-list-item-icon>
               <v-icon>{{entry.icon}}</v-icon>
@@ -21,7 +20,6 @@
                 <v-list-item-title v-text="entry.name"></v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-        </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
     <div style="display: flex;flex-direction: row-reverse;">

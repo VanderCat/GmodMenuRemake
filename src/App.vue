@@ -58,6 +58,13 @@ html {
 
 body {
   background: rgb(170, 204, 255);
+  position:relative;
+}
+
+.fillViewPort {
+  height: 100vh; 
+  top: 0px; 
+  max-height: calc(100% - 48px);
 }
 
 .app {
@@ -66,6 +73,6 @@ body {
 }
 #main {
   width: 100%;
-  height: 100%;
+  max-height: calc(100vh - 48px);
 }
 </style>

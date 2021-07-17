@@ -13,26 +13,21 @@ const routes = [
   {
     path: '/workshop/:type',
     name: 'Workshop',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Workshop.vue')
+    component: () => import(/* webpackChunkName: "workshop" */ '../views/Workshop.vue')
   },
   {
     path: '/newgame',
     name: 'New Game',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/NewGame.vue')
+    children: [{
+      path: ":map",
+      component: () => import(/* webpackChunkName: "newgame" */ '../views/Map.vue')
+    }],
+    component: () => import(/* webpackChunkName: "newgame" */ '../views/NewGame.vue')
   },
   {
     path: '/servers',
     name: 'Multiplayer',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Multiplayer.vue')
+    component: () => import(/* webpackChunkName: "multiplayer" */ '../views/Multiplayer.vue')
   }
 ]
 
