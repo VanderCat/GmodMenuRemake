@@ -155,7 +155,7 @@ export default {
                         window.lua.runConsoleCommand(setting.name, String(setting.Value))
                         break;
                     case "CheckBox":
-                        window.lua.runConsoleCommand(setting.name, String(setting.Value))
+                        window.lua.runConsoleCommand(setting.name, setting.Value? "1" : "0")
                         break;
                 }
             }
