@@ -1,3 +1,4 @@
+//THIS MODULE IS BASICLY A BRIDGE BETWEEN VUE AND *VANILLA* GMOD MENU BACKEND
 module.exports = {
     UpdateNewsList(news, hide) {
         window.Vue.$store.commit("UpdateNews",news,hide)
@@ -24,6 +25,10 @@ module.exports = {
     UpdateMaps(maps)
     {
         window.Vue.$store.commit("UpdateMaps", maps)
+    },
+    SetProblemCount(count, severe)
+    {
+        window.Vue.$store.commit("UpdateProblems", {count,severe})
     },
     lua: {
         run(command) {

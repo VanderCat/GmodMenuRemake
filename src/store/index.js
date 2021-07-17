@@ -473,7 +473,11 @@ export default new Vuex.Store({
           }
       }, 
       "hostname": "Garry's Mod"
-    } 
+    },
+    problems: {
+      count: 1,
+      severe: true
+    }
   },
   mutations: {
     UpdateNews( state, news )
@@ -502,6 +506,9 @@ export default new Vuex.Store({
     UpdateMaps( state, maps)
     {
       Vue.set(state, "maps", maps) // Reactivity
+    },
+    UpdateProblems(state, obj) {
+      Vue.set(state, "problems", obj) // Reactivity
     }
   },
   actions: {

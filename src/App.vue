@@ -9,16 +9,14 @@
           <v-icon>mdi-arrow-left</v-icon>
         </v-btn>
         <v-spacer></v-spacer>
-        <v-btn icon @click="runProblems">
-          <v-icon>mdi-alert</v-icon>
-        </v-btn>
+        <Alert/>
         <v-btn icon>
           <v-icon>mdi-wrench</v-icon>
         </v-btn>
         <v-btn icon>
           <v-icon>mdi-translate</v-icon>
         </v-btn>
-        <Gamemode :gamemodes="$store.state.gamemodes.list" :selectedItem="$store.state.gamemodes.selected"/> <!-- IDK why i passing it by properties but whatever -->
+        <Gamemode :gamemodes="$store.state.gamemodes.list" :selectedItem="$store.state.gamemodes.selected"/> <!-- IDK why im passing it by properties but whatever -->
       </v-toolbar>
     </v-footer>
   </v-app>
@@ -26,7 +24,8 @@
 
 <script>
 
-import gamemode from "./components/Gamemodes.vue";
+import gamemode from "./components/NavigationPanel/Gamemodes.vue";
+import Alert from "./components/NavigationPanel/Alert.vue";
 
 export default {
   name: 'App',
@@ -34,12 +33,8 @@ export default {
   data: () => ({
   }),
     components: {
-      'Gamemode': gamemode
-    },
-    methods: {
-      runProblems() {
-        window.lua.run('OpenProblemsPanel()')
-      }
+      'Gamemode': gamemode,
+      Alert
     },
     created() {
       this.$store.commit("UpdateEngine")
