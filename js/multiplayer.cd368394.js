@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["multiplayer"],{4388:function(l,n,u){"use strict";u.r(n);var e,p,t=u("2877"),a={},o=Object(t["a"])(a,e,p,!1,null,null,null);n["default"]=o.exports}}]);
+//# sourceMappingURL=multiplayer.cd368394.js.map

@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["workshop"],{fba8:function(e,n,t){"use strict";t.r(n);var r=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("div",[e._v(e._s(e.$route.params.type))])},s=[],a=t("2877"),o={},u=Object(a["a"])(o,r,s,!1,null,null,null);n["default"]=u.exports}}]);
+//# sourceMappingURL=workshop.23af615b.js.map
