@@ -64,7 +64,7 @@ export default new Vuex.Store({
         },
       selected: "sandbox",
       selectedId: "3"
-      },
+    },
     maps: {
       "Other": [ 
         "sb_gooniverse", 
@@ -477,6 +477,105 @@ export default new Vuex.Store({
     problems: {
       count: 1,
       severe: true
+    },
+    addons: { //Ripped straight from game, idk why some field are here but ok
+      regular: [
+        {
+          "downloaded":true,
+          "size":184982072, // bytes?
+          "file":"E:\\SteamLibrary\\steamapps\\workshop\\content\\4000\\2441768536/temp.gma", //why tf this is here????????????
+          "mounted":true, //is Enabled i guess
+          "updated":1617720508, //last update
+          "models":0, //tf is this means
+          "title":"gm_ploschadka", //Addon Name
+          "tags":"Addon,map,Realism,Scenic", //Tags (Never saw them in game lmao)
+          "timeadded":1625511584, //i guess this is time at addon was downloaded?
+          "wsid":"2441768536" //workshop id
+        },
+        {
+          "downloaded":true,
+          "size":31745712,
+          "file":"addons/molokova_46_redux_1436377393.gma",
+          "mounted":true,
+          "updated":1542032225,
+          "models":18,
+          "title":"Molokova 46 Redux",
+          "tags":"Addon,map,Roleplay,Realism",
+          "timeadded":1625507624,
+          "wsid":"1436377393"
+        },
+        {
+          "downloaded":true,
+          "size":12664338,
+          "file":"addons/gm_excess_construct_174651081.gma",
+          "mounted":true,
+          "updated":1377987478,
+          "models":4,
+          "title":"gm_excess_construct",
+          "tags":"Addon,map,Water,Build",
+          "timeadded":1625507533,
+          "wsid":"174651081"
+        },
+        {
+          "downloaded":true,
+          "size":54338431,
+          "file":"",
+          "mounted":false,
+          "updated":1626296476,
+          "models":0,
+          "title":"[ArcCW] Arctic's Customizable Weapons (Base Only)",
+          "tags":"Addon,Weapon,Realism,Roleplay",
+          "timeadded":1623676415,
+          "wsid":"2131057232"
+        },
+        {
+          "downloaded":true,
+          "size":2117567,
+          "file":"",
+          "mounted":false,
+          "updated":1614876267,
+          "models":0,
+          "title":"[ArcCW] Heartbeat Sensor","tags":"Addon,Weapon,Fun,Realism",
+          "timeadded":1623676392,
+          "wsid":"2414012615"
+        },
+        {
+          "downloaded":true,
+          "size":333786205,
+          "file":"",
+          "mounted":false,
+          "updated":1615424316,
+          "models":0,
+          "title":"gm_mobenix_v3_final",
+          "tags":"Addon,map,Fun,Roleplay",
+          "timeadded":1623600744,
+          "wsid":"1617295051"
+        },
+        {
+          "downloaded":true,
+          "size":5109,
+          "file":"",
+          "mounted":false,
+          "updated":1601013560,
+          "models":0,
+          "title":"Manual Weapon Pickup",
+          "tags":"Addon,ServerContent,Roleplay,Realism",
+          "timeadded":1623600694,
+          "wsid":"167545348"
+        },
+        {
+          "downloaded":true,
+          "size":879,
+          "file":"addons/p2p_hero_-_the_original_version_[read_desc][reuploaded]_1101154319.gma",
+          "mounted":false,
+          "updated":1501934624,
+          "models":0,
+          "title":"P2P Hero - THE ORIGINAL VERSION [READ DESC][REUPLOADED]",
+          "tags":"Addon,tool,Fun,Build",
+          "timeadded":1623600609,
+          "wsid":"1101154319"
+        }
+      ]
     }
   },
   mutations: {

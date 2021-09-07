@@ -14,6 +14,11 @@ module.exports = {
         'window.jQuery': 'jquery',
         jQuery: 'jquery'
       })
-    ]
+    ],
+    resolve: {
+      alias: {
+        'fast-average-color': 'fast-average-color/dist/index.esm.js'
+      }
+    }
   }
 }

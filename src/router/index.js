@@ -13,6 +13,16 @@ const routes = [
   {
     path: '/workshop/:type',
     name: 'Workshop',
+    children: [
+      {
+        path:":category",
+        children: [
+          {
+            path:":cattype",
+          }
+        ],
+      },
+    ],
     component: () => import(/* webpackChunkName: "workshop" */ '../views/Workshop.vue')
   },
   {
@@ -28,6 +38,14 @@ const routes = [
     path: '/servers',
     name: 'Multiplayer',
     component: () => import(/* webpackChunkName: "multiplayer" */ '../views/Multiplayer.vue')
+  },
+  {
+    path: '/settings',
+    name: 'Settings',
+    children: [{
+      path: ":setting"
+    }],
+    component: () => import(/* webpackChunkName: "settings" */ '../views/Settings.vue')
   }
 ]
 

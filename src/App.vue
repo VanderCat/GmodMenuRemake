@@ -10,9 +10,7 @@
         </v-btn>
         <v-spacer></v-spacer>
         <Alert/>
-        <v-btn icon>
-          <v-icon>mdi-wrench</v-icon>
-        </v-btn>
+        <Mount/>
         <v-btn icon>
           <v-icon>mdi-translate</v-icon>
         </v-btn>
@@ -26,6 +24,7 @@
 
 import gamemode from "./components/NavigationPanel/Gamemodes.vue";
 import Alert from "./components/NavigationPanel/Alert.vue";
+import Mount from "./components/NavigationPanel/GameMount.vue";
 
 export default {
   name: 'App',
@@ -34,13 +33,15 @@ export default {
   }),
     components: {
       'Gamemode': gamemode,
-      Alert
+      Alert,
+      Mount
     },
     created() {
       this.$store.commit("UpdateEngine")
       if (this.$store.state.IN_ENGINE) {
         $(document.body).css("background", "none")
         window.lua.run("LoadNewsList()")
+        window.lua.run("UpdateAddonDisabledState()")
       }
     }
   };

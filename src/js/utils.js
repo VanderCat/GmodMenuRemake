@@ -30,6 +30,13 @@ module.exports = {
     {
         window.Vue.$store.commit("UpdateProblems", {count,severe})
     },
+    UpdateAddonDisabledState(noaddons, noworkshop) {
+        console.log("noaddons:", JSON.stringify(noaddons))
+        console.log("noworkshop:", JSON.stringify(noworkshop))
+    },
+    ReceivedChildAddonInfo(json) {
+        console.log(JSON.stringify(json))
+    },
     lua: {
         run(command) {
             console.debug("DEBUG:"+command)
@@ -47,5 +54,13 @@ module.exports = {
         runConsoleCommand(command,arg) {
             this.run("RunConsoleCommand(\""+command+((typeof arg === "undefined" || arg === null)? "" : "\", \""+arg)+"\")")
         },
+    },
+    subscriptions: {
+        Update(json) {
+            console.log(JSON.stringify(json))
+        },
+        UpdateUGC(json) {
+            console.log(JSON.stringify(json))
+        }
     }
   }

@@ -52,29 +52,29 @@ export default {
             {
                 icon:"mdi-toy-brick-search",
                 name:"Addons", 
-                action: ()=>{window.Vue.$router.push("/workshop/addons")}
+                action: ()=>{window.Vue.$router.push("/workshop/addons/Subscribed/All")}
             },
             {
                 icon: "mdi-content-copy",
                 name:"Dupes", 
-                action: ()=>{window.Vue.$router.push("/workshop/dupes")}
+                action: ()=>{window.Vue.$router.push("/workshop/dupes/Subscribed/All")}
             },
             {
                 icon: "mdi-content-save-all",
                 name:"Saves", 
-                action: ()=>{window.Vue.$router.push("/workshop/saves")}
+                action: ()=>{window.Vue.$router.push("/workshop/saves/Subscribed/All")}
             },
             {
                 icon: "mdi-video",
                 name:"Demos", 
-                action: ()=>{window.Vue.$router.push("/workshop/demos")}
+                action: ()=>{window.Vue.$router.push("/workshop/demos/Subscribed/All")}
             },
           ],
           [
             {
                 icon: "mdi-cog",
                 name: "Options", 
-                action: ()=>{window.lua.runUICommand("OpenOptionsDialog")}
+                action: ()=>{window.Vue.$router.push("/settings/keyboard")}//{window.lua.runUICommand("OpenOptionsDialog")}
             },
           ],
           [

@@ -45,7 +45,7 @@ export default {
           if (this.filteredGamemodes[id].name!=New) counter++; else {this.selectedId=counter; return;}
         }
       },
-      selectedId(New, old) {
+      selectedId() {
         var counter = 0;
         for (var id in this.filteredGamemodes) {
           if (counter==this.selectedId) {
